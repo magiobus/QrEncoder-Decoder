@@ -1,0 +1,93 @@
+<h1>Ti.Barcode Module</h1>
+
+<h2>Description</h2>
+
+<p>Lets you process 1D/2D barcodes.</p>
+
+<h2>Accessing the Ti.Barcode Module</h2>
+
+<p>To access this module from JavaScript, you would do the following:</p>
+
+<pre>Titanium.Barcode = Ti.Barcode = require("ti.barcode");</pre>
+
+<h2>Functions</h2>
+
+<h3>Ti.Barcode.capture({...})</h3>
+
+<p>Brings up the camera and begins the capture sequence for processing a barcode.
+Takes one argument, a dictionary containing the keys:</p>
+
+<ul>
+<li>error[function]: The callback for when an error occurs</li>
+<li>success[function]: The callback for successful processing</li>
+<li>cancel[function]: The callback for when processing is canceled.</li>
+</ul>
+
+<p>Each callback receives an event with the following properties, if available:</p>
+
+<ul>
+<li>message[string]: The error message</li>
+<li>contentType[int]: The type of barcode content</li>
+<li>result[object]: The content of the barcode</li>
+<li>data[object]: The parsed fields associated with the contentType</li>
+</ul>
+
+<h2>Properties</h2>
+
+<h3>Ti.Barcode.allowRotation[boolean]</h3>
+
+<p>Value that indicates if the barcode capture should analyze captured images in either portrait or landscape device orientation. (Warning: Analyzing both the captured image and the rotated version(s) of the image will increase the processing time of the capture.)</p>
+
+<ul>
+<li>true: Captured images will be analyzed in both portrait and landscape orientation</li>
+<li>false: Captured images will be analyzed using only the current device orientation. <b>This is the default setting.</b></li>
+</ul>
+
+<h3>URL[int] (read-only)</h3>
+
+<p>Value representing URL content</p>
+
+<h3>SMS[int] (read-only)</h3>
+
+<p>Value representing SMS content</p>
+
+<h3>TELEPHONE[int] (read-only)</h3>
+
+<p>Value representing telephone number content</p>
+
+<h3>TEXT[int] (read-only)</h3>
+
+<p>Value representing text content</p>
+
+<h3>CALENDAR[int] (read-only)</h3>
+
+<p>Value representing date content</p>
+
+<h3>GEOLOCATION[int] (read-only)</h3>
+
+<p>Value representing geolocation content</p>
+
+<h3>EMAIL[int] (read-only)</h3>
+
+<p>Value representing an email address</p>
+
+<h3>CONTACT[int] (read-only)</h3>
+
+<p>Value representing contact information (vcard or mecard)</p>
+
+<h3>BOOKMARK[int] (read-only)</h3>
+
+<p>Value representing bookmark content</p>
+
+<h2>Usage</h2>
+
+<p>See example.</p>
+
+<h2>Author</h2>
+
+<p>Jeff Haynie <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#106;&#104;a&#121;n&#x69;&#x65;&#64;&#x61;&#x70;&#112;&#x63;&#101;&#x6c;&#101;&#114;&#97;&#x74;&#x6f;&#114;&#46;&#99;o&#109;">&#106;&#104;a&#121;n&#x69;&#x65;&#64;&#x61;&#x70;&#112;&#x63;&#101;&#x6c;&#101;&#114;&#97;&#x74;&#x6f;&#114;&#46;&#99;o&#109;</a>, Appcelerator Inc. <br />
+Jeff English <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x6a;&#101;&#x6e;&#103;&#108;&#x69;&#115;&#104;&#x40;&#97;&#112;&#112;&#99;&#101;&#108;&#x65;&#x72;a&#x74;&#111;&#114;&#46;c&#111;&#109;">&#x6a;&#101;&#x6e;&#103;&#108;&#x69;&#115;&#104;&#x40;&#97;&#112;&#112;&#99;&#101;&#108;&#x65;&#x72;a&#x74;&#111;&#114;&#46;c&#111;&#109;</a>, Appcelerator Inc.</p>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2011 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>
